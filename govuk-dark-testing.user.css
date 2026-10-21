@@ -1,0 +1,34 @@
+/* ==UserStyle==
+@version        1.0.0
+@name           GOV.UK Dark mode (testing)
+@description    CSS Custom Property only version, to test underlying GOV.UK Frontend codebase for gaps in support.
+@author         Nick Colley
+@namespace      https://github.com/NickColley
+@homepageURL    https://github.com/NickColley/govuk-dark
+@updateURL      https://raw.githubusercontent.com/NickColley/govuk-dark/main/govuk-dark-testing.user.css
+==/UserStyle== */
+
+@-moz-document domain("gov.uk"), regexp("https://govuk-frontend-.+\\.herokuapp\\.com.+") {
+    :root {
+        color-scheme: dark;
+
+        --govuk-brand-colour: #1d70b8;
+        --govuk-text-colour: #d1d7e0;
+        --govuk-inverse-text-colour: #fffffff;
+        --govuk-template-background-colour: #1e2c3c;
+        --govuk-body-background-colour: #212830;
+        --govuk-hover-colour: #11181c;
+        --govuk-link-colour: #8EB8DC;
+        --govuk-link-visited-colour: #AA98CF;
+        --govuk-link-hover-colour: #D2E2F1;
+        --govuk-link-active-colour: #0b0c0c;
+        --govuk-surface-background-colour: #1e2c3c;
+        --govuk-surface-border-colour: #0F385C;
+        --govuk-secondary-text-colour: #8EB8DC;
+        --govuk-error-colour: #D76868;
+        --govuk-border-colour: #3d444d;
+
+        --govuk-surface-text-colour: var(--govuk-text-colour);
+        --govuk-input-border-colour: var(--govuk-text-colour);
+    }
+}
