@@ -1,11 +1,11 @@
 /* ==UserStyle==
-@version        1.0.0
+@version        1.0.1
 @name           GOV.UK Dark mode
 @description    GOV.UK Dark theme modelled after the GitHub soft dark mode
 @author         Nick Colley
 @namespace      https://github.com/NickColley
 @homepageURL    https://github.com/NickColley/govuk-dark
-@updateURL      https://raw.githubusercontent.com/NickColley/govuk-dark/master/govuk-dark.user.css
+@updateURL      https://raw.githubusercontent.com/NickColley/govuk-dark/main/govuk-dark.user.css
 ==/UserStyle== */
 
 @-moz-document domain("gov.uk"), regexp("https://govuk-frontend-.+\\.herokuapp\\.com.+") {
