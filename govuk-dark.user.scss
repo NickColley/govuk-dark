@@ -1,0 +1,123 @@
+/* ==UserStyle==
+@version        1.0.0
+@name           GOV.UK Dark mode
+@description    GOV.UK Dark theme modelled after the GitHub soft dark mode
+@author         Nick Colley
+@namespace      https://github.com/NickColley
+@homepageURL    https://github.com/NickColley/govuk-dark
+@updateURL      https://raw.githubusercontent.com/NickColley/govuk-dark/master/govuk-dark.user.css
+==/UserStyle== */
+
+@-moz-document domain("gov.uk"), regexp("https://govuk-frontend-.+\\.herokuapp\\.com.+") {
+    :root {
+        color-scheme: dark;
+
+        --govuk-brand-colour: #1d70b8;
+        --govuk-text-colour: #d1d7e0;
+        --govuk-inverse-text-colour: #fffffff;
+        --govuk-template-background-colour: #1e2c3c;
+        --govuk-body-background-colour: #212830;
+        --govuk-hover-colour: #11181c;
+        --govuk-link-colour: #8EB8DC;
+        --govuk-link-visited-colour: #AA98CF;
+        --govuk-link-hover-colour: #D2E2F1;
+        --govuk-link-active-colour: #0b0c0c;
+        --govuk-surface-background-colour: #1e2c3c;
+        --govuk-surface-border-colour: #0F385C;
+        --govuk-secondary-text-colour: #8EB8DC;
+        --govuk-error-colour: #D76868;
+        --govuk-border-colour: #3d444d;
+
+        --govuk-surface-text-colour: var(--govuk-text-colour);
+        --govuk-input-border-colour: var(--govuk-text-colour);
+
+        /* proposed */
+        --govuk-hover-subtle: #192229;
+        --govuk-raised-background: #192229;
+        --govuk-input-background-colour: var(--govuk-body-background-colour);
+    }
+
+    /* Stuff that needs sorting */
+    /* Buttons */
+    /* Text input, Textarea, etc */
+    .govuk-select,
+    .govuk-input,
+    .govuk-textarea {
+        background: var(--govuk-input-background-colour);
+    }
+
+    /* Checkboxes, Radios */
+    .govuk-radios__label::before,
+    .govuk-checkboxes__label::before {
+        border-color: var(--govuk-input-border-colour);
+        background: var(--govuk-input-background-colour);
+    }
+
+    /* Accordion */
+    .govuk-frontend-supported {
+        .govuk-accordion {
+            --_govuk-accordion-hover-colour: var(--govuk-hover-subtle);
+            --_govuk-accordion-focus-colour: var(--govuk-focus-colour);
+        }
+        .govuk-accordion__show-all:hover {
+            background: var(--_govuk-accordion-hover-colour);
+            box-shadow: 0 -2px var(--_govuk-accordion-hover-colour),
+            0 4px var(--_govuk-accordion-hover-colour);
+        }
+        .govuk-accordion__show-all:not(:focus):hover,
+        .govuk-accordion__section-button:not(:focus):hover {
+            background: var(--_govuk-accordion-hover-colour);
+            .govuk-accordion-nav__chevron::after {
+                color: var(--_govuk-accordion-hover-colour);
+            }
+        }
+        .govuk-accordion__show-all:focus {
+            background: var(--_govuk-accordion-focus-colour);
+            box-shadow: 0 -2px var(--_govuk-accordion-focus-colour),
+            0 4px var(--_govuk-accordion-focus-colour);
+        }
+        .govuk-accordion__section-button:focus {
+            background: var(--_govuk-accordion-hover-colour);
+        }
+        .govuk-accordion__show-all:focus,
+        .govuk-accordion__section-button:focus {
+            .govuk-accordion__section-toggle-text {
+                color: var(--govuk-focus-text-colour);
+            }
+            .govuk-accordion-nav__chevron {
+                color: var(--govuk-focus-text-colour);
+                background: var(--govuk-focus-text-colour);
+            }
+            .govuk-accordion-nav__chevron::after {
+                color: var(--_govuk-accordion-focus-colour);
+            }
+        }
+    }
+
+    /* Tabs */
+    .govuk-frontend-supported {
+        .govuk-tabs__list-item:not(.govuk-tabs__list-item--selected) {
+            background: var(--govuk-raised-background);
+        }
+    }
+
+    /* Task list */
+    .govuk-task-list__item--with-link:hover {
+        background: var(--govuk-raised-background);
+    }
+
+    /* Summary list (card) */
+    .govuk-summary-card__title-wrapper {
+        background: var(--govuk-raised-background);
+    }
+
+    /* Pagination */
+    .govuk-pagination__prev:not(.govuk-pagination__item--current):hover,
+    .govuk-pagination__next:not(.govuk-pagination__item--current):hover,
+    .govuk-pagination__item:not(.govuk-pagination__item--current):hover {
+        background: var(--govuk-raised-background);
+    }
+    .govuk-pagination__item--current {
+        background-color: var(--govuk-brand-colour);
+    }
+}
