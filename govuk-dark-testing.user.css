@@ -3,9 +3,9 @@
 @name           GOV.UK Dark mode (testing)
 @description    CSS Custom Property only version, to test underlying GOV.UK Frontend codebase for gaps in support.
 @author         Nick Colley
-@namespace      https://github.com/NickColley
-@homepageURL    https://github.com/NickColley/govuk-dark
-@updateURL      https://raw.githubusercontent.com/NickColley/govuk-dark/main/govuk-dark-testing.user.css
+@namespace      https://github.com/NickColley/govuk-themes
+@homepageURL    https://github.com/NickColley/govuk-themes
+@updateURL      https://raw.githubusercontent.com/NickColley/govuk-themes/main/govuk-dark-testing.user.css
 ==/UserStyle== */
 
 @-moz-document domain("gov.uk"), regexp("https://govuk-frontend-.+\\.herokuapp\\.com.+") {
